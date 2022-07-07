@@ -11,7 +11,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.CreationTimestamp;
-import org.springframework.data.annotation.CreatedDate;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -42,7 +41,7 @@ public class User {
 	private String email;
 	
 	@Column(length = 11, nullable = false)
-	private int phoneNumber;
+	private String phoneNumber;
 	
 	@Column(nullable = false)
 	private String address;

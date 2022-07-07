@@ -8,6 +8,6 @@ public class UserController {
 
 	@GetMapping("/join_form")
 	public String joinForm() {
-		return "user/join_form2";
+		return "user/join_form";
 	}
 }

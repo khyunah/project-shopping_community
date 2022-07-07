@@ -59,25 +59,25 @@ uri="http://www.springframework.org/security/tags" %>
             <c:when test="${empty principal}">
 
               <li class="nav-item">
-                <a class="nav-link text-dark" href="/auth/join_form">Sosial</a>
+                <a class="nav-link text-dark" href="/auth/join_form">SOSIAL</a>
               </li>
         <li class="nav-item">
   			<div class="dropdown">
-			    <button class="nav-link dropbtn bg-white text-dark">Store 
+			    <button class="nav-link dropbtn bg-white text-dark">STORE 
 			      <i class="fa fa-caret-down"></i>
 			    </button>
     			<div class="dropdown-content bg-white">
-				      <a href="/">Man's</a>
-				      <a href="#">Woman's</a>
-				      <a href="#">Accessories</a>
+				      <a href="/">MAN's</a>
+				      <a href="#">WOMAN's</a>
+				      <a href="#">ACCESSORIES</a>
 			    </div>
 			  </div> 
 			</li>
               <li class="nav-item">
-                <a class="nav-link text-dark" href="/auth/login_form">Login</a>
+                <a class="nav-link text-dark" href="/auth/login_form">LOGIN</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-dark" href="/auth/join_form">Join</a>
+                <a class="nav-link text-dark" href="/auth/join_form">JOIN</a>
               </li>
             </c:when>
             
@@ -85,33 +85,33 @@ uri="http://www.springframework.org/security/tags" %>
               <!-- 로그인 성공하면(회원이면) 글 작성 가능 -->
               <li class="nav-item">
                 <li class="nav-item">
-                  <a class="nav-link text-dark" href="/auth/join_form">Sosial</a>
+                  <a class="nav-link text-dark" href="/auth/join_form">SOSIAL</a>
                 </li>
                <li class="nav-item">
   			<div class="dropdown">
-			    <button class="nav-link dropbtn bg-white text-dark">Store 
+			    <button class="nav-link dropbtn bg-white text-dark">STORE 
 			      <i class="fa fa-caret-down"></i>
 			    </button>
     			<div class="dropdown-content bg-white">
-				      <a href="#">Man's</a>
-				      <a href="#">Woman's</a>
-				      <a href="#">Accessories</a>
+				      <a href="#">MAN's</a>
+				      <a href="#">WOMAN's</a>
+				      <a href="#">ACCESSORIES</a>
 			    </div>
 			  </div> 
 			</li>
                 <a
                   class="nav-link text-dark"
                   href="/board/cart_form/${principal.user.id}"
-                  >ShopCart</a
+                  >SHOPPING CART</a
                 >
               <li class="nav-item">
                 <a class="nav-link text-dark" href="/user/update_form"
-                  >MyPage</a
+                  >MY PAGE</a
                 >
               </li>
               <li class="nav-item">
                 <!-- 시큐리티를 적용하면 자동 로그아웃 처리 된다. -->
-                <a class="nav-link text-dark" href="/logout">Logout</a>
+                <a class="nav-link text-dark" href="/logout">LOGOUT</a>
               </li>
             </c:when>
           </c:choose>

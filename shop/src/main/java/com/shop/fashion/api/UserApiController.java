@@ -1,5 +1,7 @@
 package com.shop.fashion.api;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.ui.Model;
@@ -16,6 +18,8 @@ public class UserApiController {
 
 	@Autowired
 	private UserService userService;
+	@Autowired
+	private HttpSession httpSession;
 
 	// 회원가입
 	@PostMapping("/security/join-user")
@@ -39,9 +43,11 @@ public class UserApiController {
 	// 로그인
 	@PostMapping("/security/login")
 	public ResponseDto<User> loginUser(@RequestBody User user) {
-		System.out.println("로그인 Apicontroller");
 		User userEntity = userService.loginUser(user);
-		System.out.println("로그인 API단에서의 user 정보 : " + userEntity.getUserId());
+		
+		if(userEntity.getUserId() != null) {
+			httpSession.setAttribute("principal", userEntity);
+		}
 		return new ResponseDto<User>(HttpStatus.OK.value(), userEntity);
 	}
 }

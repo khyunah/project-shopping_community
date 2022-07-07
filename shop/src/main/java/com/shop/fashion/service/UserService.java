@@ -36,7 +36,6 @@ public class UserService {
 	// 로그인
 	@Transactional
 	public User loginUser(User user) {
-		System.out.println("service 단에서의 user 정보 :" + user.getUserId());
 		return userRepository.findByUserIdAndPassword(user.getUserId(), user.getPassword()).orElseGet(() -> {
 			return new User();
 		});

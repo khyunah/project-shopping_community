@@ -31,7 +31,13 @@
   </label>
 
   <br/><br/><br/>
-  <button type="button" id="btn-login">login</button>
+  <div>
+  	<button type="button" id="btn-login">login</button>
+    <a href="">
+  	  <img src="/images/kakao_login.png" width="86" height="49"/>
+    </a>
+  </div>
+  
 </form>
 <script src="/js/user.js"></script>
 

@@ -8,5 +8,9 @@ import com.shop.fashion.model.User;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
 
+	// 회원가입시 아이디 중복체크
 	Optional<User> findByUserId(String userId);
+	
+	// 로그인 
+	Optional<User> findByUserIdAndPassword(String userId, String password);
 }

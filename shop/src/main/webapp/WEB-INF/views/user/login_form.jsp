@@ -24,7 +24,7 @@
   <br/>
   <label>
     <p class="label-txt">ENTER YOUR PASSWORD</p>
-    <input id="password" type="text" class="input" name="password" required>
+    <input id="password" type="password" class="input" name="password" required>
     <div class="line-box">
       <div class="line"></div>
     </div>

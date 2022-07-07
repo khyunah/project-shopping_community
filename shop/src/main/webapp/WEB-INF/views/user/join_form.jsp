@@ -28,14 +28,14 @@
   <br/>
   <label>
     <p class="label-txt">ENTER YOUR PASSWORD</p>
-    <input id="password" type="text" class="input" name="password" required>
+    <input id="password" type="paaword" class="input" name="password" required>
     <div class="line-box">
       <div class="line"></div>
     </div>
   </label>
   <label>
     <p class="label-txt">PASSWORD CHECK</p>
-    <input id="passwordCheck" type="text" class="input" required>
+    <input id="passwordCheck" type="password" class="input" required>
     <div class="line-box">
       <div class="line"></div>
     </div>
@@ -52,7 +52,7 @@
   </label>
   <label>
     <p class="label-txt">ENTER YOUR EMAIL</p>
-    <input type="text" class="input" name="email" required>
+    <input type="email" class="input" name="email" required>
     <div class="line-box">
       <div class="line"></div>
     </div>
@@ -67,7 +67,7 @@
   </label>
   <label>
     <p class="label-txt">ENTER YOUR PHONE</p>
-    <input type="text" class="input" name="phoneNumber" required>
+    <input type="number" class="input" name="phoneNumber" required>
     <div class="line-box">
       <div class="line"></div>
     </div>

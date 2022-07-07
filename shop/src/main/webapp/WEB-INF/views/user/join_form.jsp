@@ -11,7 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/security/join-user" method="post">
+<form action="/security/join-user" method="post" onsubmit="return checkPassword()">
   <label>
     <p class="label-txt">ENTER YOUR ID</p>
     <input type="text" class="input" name="userId" id="userId" required>
@@ -87,6 +87,10 @@ $(document).ready( function(){
 	  };
 	});
 	
+	$( "#userId" ).keyup( function() {
+		$( "#checkIdResult" ).text(null);
+	});
+	
 	$( "#password, #passwordCheck" ).keyup( function() {
 	      let password = $( "#password" ).val();
 	      let passwordCheck = $( "#passwordCheck" ).val();
@@ -116,14 +120,18 @@ $(document).ready( function(){
 		});
 	});
 	
-	$( "#btn-join" ).bind( "click" , function(){
-		if($("#checkIdResult").text() == "사용불가능" || $("#checkIdResult").text() == null){
-			alert("아이디 중복확인을 해주세요.");
-		} else if($("#checkPasswordResult").text() == "불일치" || $("#checkPasswordResult") == null){
-			alert("비밀번호가 일치하지 않습니다.");
-		}
-	});
 });
+
+function checkPassword(){
+	if($("#checkIdResult").text() == "사용불가능" || $("#checkIdResult").text() == ""){
+		alert("아이디 중복확인을 해주세요.");
+		return false;
+	} else if($("#checkPasswordResult").text() == "불일치" || $("#checkPasswordResult") == ""){
+		alert("비밀번호가 일치하지 않습니다.");
+		return false;
+	}
+} 
+
 </script>
 </body>
 </html>

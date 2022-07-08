@@ -29,3 +29,6 @@ spring:
   jackson:
     serialization:
       fail-on-empty-beans: false
+
+kakao:
+  key: f3a668adf71308ab55866383b677a93bdabfc269f1cd2caec6e37a8f41b13cfe7728cf4d14579ce742bd9823d6c0678a692eea4d722d8214dbf24db808a78cb6

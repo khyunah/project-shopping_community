@@ -1,6 +1,7 @@
 package com.shop.fashion.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,6 +15,8 @@ public class UserService {
 
 	@Autowired
 	private UserRepository userRepository;
+	@Autowired
+	private BCryptPasswordEncoder passwordEncoder;
 	
 	// 회원가입
 	@Transactional
@@ -22,10 +25,11 @@ public class UserService {
 			user.setOauth(OAuthType.ORIGIN);
 		}
 		user.setRole(RollType.USER);
+		user.setPassword(passwordEncoder.encode(user.getPassword()));
 		return userRepository.save(user);
 	}
 	
-	// 회원가입시 아이디 중복 체크
+	// 아이디 중복 체크
 	@Transactional
 	public User checkUserId(String userId) {
 		return userRepository.findByUserId(userId).orElseGet(() -> {

@@ -33,7 +33,7 @@
 	
 	
 	const list = document.querySelector('.card-list');
-	const items = document.querySelectorAll('.card');
+	const items = document.querySelectorAll('.lCard');
 	const skeletonItems = Array.from({ length: items.length }, () =>
 	  makeSkeleton()
 	);
@@ -82,7 +82,7 @@
 	      setTimeout(() => {
 	        addNewContent();
 	        loadingFinish();
-	        observeLastItem(io, document.querySelectorAll('.card'));
+	        observeLastItem(io, document.querySelectorAll('.lCard'));
 	      }, 2000);
 	    }
 	  });
